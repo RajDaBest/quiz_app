@@ -5,9 +5,19 @@ void buttonPress() {}
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        body: StartScreen(),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.deepPurple,
+                Colors.purpleAccent,
+              ],
+            ),
+          ),
+          child: const StartScreen(),
+        ),
       ),
     ),
   );
