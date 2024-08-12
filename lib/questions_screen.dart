@@ -4,9 +4,9 @@ import 'package:quiz_app/data/questions.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key, required this.onSelectedAnswer});
+  const QuestionsScreen({super.key, required this.onSelectAnswer});
 
-  final void Function(String answers) onSelectedAnswer;
+  final void Function(String answers) onSelectAnswer;
 
   @override
   State<QuestionsScreen> createState() {
@@ -17,7 +17,8 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   var currentQuestionIndex = 0;
 
-  void answerQuestion() {
+  void answerQuestion(String answer) {
+    widget.onSelectAnswer(answer);
     setState(() {
       currentQuestionIndex++;
     });
@@ -48,7 +49,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             (answer) {
               return AnswerButton(
                 answerText: answer,
-                onTap: answerQuestion,
+                onTap: () {
+                  answerQuestion(answer);
+                },
               );
             }, // the three dots (spread operator) in front of an iterable or list convert the elements of the list into comma-separated values in the place the dots appear, the values coming in the order they appear in the list, and the last value being followed by a comma
           ),
