@@ -33,11 +33,17 @@ class ResultsScreen extends StatelessWidget {
   Widget build(context) {
     final summaryData = getSummaryData();
     final int numTotalQuestions = questions.length;
-    final int numCorrectQuestions = summaryData.where(
+    /* final int numCorrectQuestions = summaryData.where(
       (data) {
         return data['user_answer'] == data['correct_answer'];
       },
-    ).length; // where () does not change the original list, returns a new iterable; return true for the data point you want to keep in this new iterable and false for those you don't; length also exists on iterables
+    ).length; // where () does not change the original list, returns a new iterable; return true for the data point you want to keep in this new iterable and false for those you don't; length also exists on iterables */
+
+    // If you have an anonymous function which might take some input values and immediately returns some modified value of the input value (or some other value) and performs no other operation, like above, it could be changed into an arrow function like:
+
+    final int numCorrectQuestions = summaryData.where(
+      (data) => data ['user_answer'] == data ['correct_answer'];
+    ).length;
 
     return Container(
       margin: const EdgeInsets.all(40),
