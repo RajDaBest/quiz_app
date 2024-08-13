@@ -3,12 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "f1d4b9f7657303ef45c07616d1d4bd0f",
+const RESOURCES = {"flutter_bootstrap.js": "a85bc5fd4a0e4b2273f45dd3cef7ee27",
 "index.html": "ce13c4d814799345a95f1c34b37d028e",
 "/": "ce13c4d814799345a95f1c34b37d028e",
 "assets/assets/images/quiz-logo.png": "13da03bdcc3eeba06ac928341fe79be9",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
-"assets/fonts/MaterialIcons-Regular.otf": "3442a9741f574a2b2efd0e3f64591300",
+"assets/fonts/MaterialIcons-Regular.otf": "4cd9d7854aa6089d3d8ba5b4b487bd2c",
 "assets/AssetManifest.json": "fc1026632742ae27abf39c679dad086e",
 "assets/AssetManifest.bin.json": "ae9824160818e226a3703a559771838d",
 "assets/AssetManifest.bin": "87a9578d07f996916e84bda3663244db",
@@ -32,7 +32,7 @@ const RESOURCES = {"flutter_bootstrap.js": "f1d4b9f7657303ef45c07616d1d4bd0f",
 "canvaskit/canvaskit.wasm": "1f237a213d7370cf95f443d896176460",
 "canvaskit/canvaskit.js.symbols": "48c83a2ce573d9692e8d970e288d75f7",
 "canvaskit/skwasm.js": "9fa2ffe90a40d062dd2343c7b84caf01",
-"main.dart.js": "236cff66e5c7d11136f36d1eb51b9598",
+"main.dart.js": "526352d79043336ff52efedd4f4c55ff",
 "flutter.js": "f31737fb005cd3a3c6bd9355efd33061"};
 // The application shell files that are downloaded before a service worker can
 // start.
